@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'NorseBold';
+    src: url('Resources/Norse-Bold.otf')
+}
+
+* {
+    box-sizing: none;
+    margin: 0;
+}
+
+/* #302F4D */
+:root {
+    --primary-color: #CCBCBC;
+    --secondary-color: #F1E3E4;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgb(241, 241, 241);
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.banner {
+    background-image: url(Resources/banner-bg.avif), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    gap: 1rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    flex: 1;
+}
+
+.form {
+    flex: 1;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 10px 15px -10px;
+}
+
+.footer {
+    flex: 1;
+}
+
+.banner {
+    display: flex;
+}
+
+.banner--content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: end;
+    /* gap: 1rem; */
+}
+
+.center-banner {
+    flex: .95;
+}
+
+.logo-container {
+    width: 100%;
+    flex:1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+   margin-top: auto;
+   display: flex;
+   align-items: center;
+    font-family: NorseBold;
+    background-color: rgba(0, 0, 0, 0.623);
+    font-size: 2rem;
+}
+
+.logo img {
+    height: 120px;
+}
+
+.author-container {
+    flex: 1;
+    display: flex;
+    align-items: end;
+}
+
+.author-container p {
+    padding: 1rem;
+}
+
+.author, .website {
+    color: white;
+}
