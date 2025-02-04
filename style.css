@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: 'NorseBold';
     src: url('Resources/Norse-Bold.otf')
 }
+
 
 * {
     box-sizing: none;
@@ -12,6 +15,7 @@
 :root {
     --primary-color: #CCBCBC;
     --secondary-color: #F1E3E4;
+    --font: "Roboto", serif;
 }
 
 body {
@@ -47,17 +51,33 @@ body {
     overflow: hidden;
 }
 
-.header {
+.header-container {
     flex: 1;
+    display: flex;
 }
 
-.form {
+.header, .footer, .form {
+    padding: 2rem 10rem 2rem 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    justify-content: end;
+}
+
+.form-container {
     flex: 1;
     background-color: var(--secondary-color);
     box-shadow: 0px 10px 15px -10px;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.footer {
+.footer-container {
     flex: 1;
 }
 
@@ -114,4 +134,94 @@ body {
 
 .author, .website {
     color: white;
+}
+
+h2 {
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.disclaimer {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer button {
+    width: fit-content;
+    padding: .8rem 2.5rem;
+    background-color: #333333;
+    color: white;
+    border-radius: .2rem;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+    font-size: 1rem;
+    font-family: var(--font);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background-color: white;
+    color: #333333
+}
+
+.footer p {
+    font-family: var(--font);
+    font-weight: 500;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.form {
+    padding-right: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+}
+
+.form div {
+    font-family: var(--font);
+    font-size: 1rem;
+    color: #777777;
+    display: flex;
+    flex-direction: column;    
+    flex: 1;
+    font-weight: 600;
+}
+
+.form div input {
+    height: 40px;
+    width: 350px;
+    border-radius: .5rem;
+    border: solid #CCBCBC 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-family: var(--font);
+    
+}
+
+.form div input:user-invalid {
+    outline: solid red 2px;
+}
+
+.form div input:focus {
+    outline: solid blue 1px;
+    box-shadow: 0px 5px 5px black;
+}
+
+.form-container h2 {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-size: 2rem;
 }
